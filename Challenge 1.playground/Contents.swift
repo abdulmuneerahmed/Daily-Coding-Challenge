@@ -17,11 +17,9 @@ func challenge1(array:[Int])->[Int]{
 
 // Solution 2
 func reducedChallenge(array:[Int])->[Int]{
-    var result:[Int] = []
-    array.map{ first in result.append(array.filter{$0 != first}.reduce(1,*))}
-    return result
+    return array.map{ first in array.filter{$0 != first}.reduce(1,*)}
 }
 
-let result = reducedChallenge(array: [3,2,1])
+let result = reducedChallenge(array: [1,2,3,4,5])
 
 print(result)
